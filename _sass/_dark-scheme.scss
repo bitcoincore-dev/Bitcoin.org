@@ -1,3 +1,5 @@
+/* This stylesheet is used when a user selects to use dark mode in their OS */
+/* media query for this check is in screen.scss and calls this _dark-scheme partial if true */
 html, body, input, textarea, select, button, .mainhero {
     background-color: #181a1b
 }
