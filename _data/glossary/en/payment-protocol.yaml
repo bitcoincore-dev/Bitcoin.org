@@ -7,7 +7,7 @@ required:
     title_max_40_characters_no_formatting: Payment Protocol, Payment Request, BIP70
 
     summary_max_255_characters_no_formatting: >
-        The protocol defined in BIP70 (and other BIPs) which lets
+        The deprecated protocol defined in BIP70 (and other BIPs) which lets
         spenders get signed payment details from receivers.
 
     synonyms_shown_in_glossary_capitalize_first_letter:
@@ -23,7 +23,7 @@ optional:
         - IP-to-IP payment protocol (an insecure, discontinued protocol included in early versions of Bitcoin)
 
     links_html_or_markdown_style_capitalize_first_letter:
-        - "[Payment Protocol](/en/developer-guide#term-payment-protocol) --- Bitcoin.org Developer Guide"
+        - "[Payment Protocol](/en/payment-processing-guide#term-payment-protocol) --- Bitcoin.org Developer Guide"
         - "[BIP70: payment protocol](https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki) --- Bitcoin Improvement Proposals"
 
 ---

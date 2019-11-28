@@ -9,8 +9,8 @@ title: "Running A Full Node - Bitcoin"
 end_of_page: |
   <script>updateToc();</script>
   <script>accordion();</script>
-  <script>onScrollButton();</script> 
-  <script>boxShow();</script> 
+  <script>onScrollButton();</script>
+  <script>boxShow();</script>
 breadcrumbs:
   - bitcoin
   - bcc
@@ -29,7 +29,6 @@ Configuration](#network-configuration) section for details.
 {% endcapture %}
 
 {% capture verifyReleaseSignatures %}
-<div class="box" markdown="1">
 *Optional: Verify the release signatures*
 
 If you know how to use PGP, you should also click the *Verify Release
@@ -55,8 +54,6 @@ on the release signatures file. Finally, use PGP or another utility to
 compute the SHA256 hash of the archive you downloaded, and ensure the
 computed hash matches the hash listed in the verified release
 signatures file.
-
-</div>
 {% endcapture %}
 
 
@@ -222,7 +219,7 @@ have an easy-to-use node.
 
 ## Initial Block Download(IBD)
 
-[Initial block download](/en/developer-guide#initial-block-download)
+[Initial block download](/en/p2p-network-guide#initial-block-download)
 refers to the process where nodes synchronize themselves
 to the network by downloading blocks that are new to them.
 This will happen when a node is far behind the tip of the [best block chain](/en/glossary/block-chain).
@@ -244,187 +241,6 @@ If you are using Bitcoin Core GUI, you can monitor the progress of IBD in the st
 ![Bitcoin-Qt Initial Block Download](/img/full-node/en-bitcoin-qt-ibd.png?{{site.time | date: '%s'}})
 
 ## Linux Instructions
-
-The following instructions describe installing Bitcoin Core on Linux
-systems.
-
-### Ubuntu 16.04
-
-*Instructions for Bitcoin Core 0.14.2
-
-If you use Ubuntu Desktop, click the Ubuntu swirl icon to start the Dash and type "term" into the
-input box. Choose any one of the terminals listed:
-
-![Dash term](/img/full-node/en-dash-term.png?{{site.time | date: '%s'}})
-
-Alternatively, access a console or terminal emulator using another
-method, such as SSH on Ubuntu Server or a terminal launcher in an
-alternative desktop environment.
-
-Type the following line to add the Bitcoin Personal Package Archive
-(PPA) to your system:
-
-    sudo apt-add-repository ppa:bitcoin/bitcoin
-
-You will be prompted for your user password.  Provide it to continue.
-Afterwards, the following text will be displayed:
-
-    Stable Channel of bitcoin-qt and bitcoind for Ubuntu, and their
-    dependencies
-
-    Note that you should prefer to use the official binaries, where possible, to
-    limit trust in Launchpad/the PPA owner.
-
-    No longer supports precise, due to its ancient gcc and Boost versions.
-    More info: https://launchpad.net/~bitcoin/+archive/ubuntu/bitcoin
-    Press [ENTER] to continue or ctrl-c to cancel adding it
-
-Press enter to continue. The following text (with some variations) will
-be displayed and you will be returned to the command line prompt:
-
-    gpg: keyring `/tmp/tmpixuqu73x/secring.gpg' created
-    gpg: keyring `/tmp/tmpixuqu73x/pubring.gpg' created
-    gpg: requesting key 8842CE5E from hkp server keyserver.ubuntu.com
-    gpg: /tmp/tmpixuqu73x/trustdb.gpg: trustdb created
-    gpg: key 8842CE5E: public key "Launchpad PPA for Bitcoin" imported
-    gpg: no ultimately trusted keys found
-    gpg: Total number processed: 1
-    gpg:               imported: 1  (RSA: 1)
-    OK
-
-Type the following line to get the most recent list of packages:
-
-    sudo apt-get update
-
-A large number of lines will be displayed as different update files are
-downloaded.  This step may take several minutes on a slow Internet
-connection.
-
-<div class="box" markdown="1">
-*To continue, choose one of the following options*
-
-1. To install the Bitcoin Core Graphical User Interface (GUI), type the
-   following line and proceed to the [Bitcoin Core GUI](#ubuntu-gui)
-   section below:
-
-        sudo apt-get install bitcoin-qt
-
-2. To install the Bitcoin Core daemon (bitcoind), which is useful for
-   programmers and advanced users, type the following line and proceed
-   to the [Bitcoin Core Daemon](#ubuntu-daemon) section below:
-
-        sudo apt-get install bitcoind
-
-3. To install both the GUI and the daemon, type the following line and
-   read both the [GUI instructions](#ubuntu-gui) and the [daemon
-   instructions](#ubuntu-daemon). Note that you can't run both the GUI
-   and the daemon at the same time using the same configuration
-   directory.
-
-        sudo apt-get install bitcoin-qt bitcoind
-
-After choosing what packages to install, you will be asked whether you
-want to proceed.  Press enter to continue.
-</div>
-
-#### Bitcoin Core GUI {#ubuntu-gui}
-{:.no_toc}
-
-To start Bitcoin Core GUI, click the Ubuntu swirl icon to open the Dash,
-type `bitcoin`, and click the Bitcoin icon.
-
-![Dash Bitcoin-Qt](/img/full-node/en-dash-bitcoin-qt.png?{{site.time | date: '%s'}})
-
-You will be prompted to choose a directory to store the Bitcoin block
-chain and your wallet.  Unless you have a separate partition or drive
-you want to use, click Ok to use the default.
-
-![Bitcoin-Qt Welcome](/img/full-node/en-bitcoin-qt-welcome.png?{{site.time | date: '%s'}})
-
-Bitcoin Core GUI will begin to download the block chain.  This
-step will take at least several days, and it may take much more time on
-a slow Internet connection or with a slow computer.  During the
-download, Bitcoin Core will use a significant part of your connection
-bandwidth.  You can stop Bitcoin Core at any time by closing it; it will
-resume from the point where it stopped the next time you start it.
-
-![Bitcoin-Qt Initial Block Download](/img/full-node/en-bitcoin-qt-ibd.png?{{site.time | date: '%s'}})
-
-After download is complete, you may use Bitcoin Core as your wallet or
-you can just let it run to help support the Bitcoin network.
-
-<div class="box" markdown="1">
-*Optional: Start Your Node At Login*
-
-Starting your node automatically each time you login to your computer
-makes it easy for you to contribute to the network. The easiest way
-to do this is to tell Bitcoin Core GUI to start at login.
-
-While running Bitcoin Core GUI, open the Settings menu and choose
-Options.  On the Main tab, click *Start Bitcoin on system login*.  Click
-the Ok button to save the new settings.
-
-![Choosing to start Bitcoin Core at login](/img/full-node/en-start-on-login.png?{{site.time | date: '%s'}})
-
-The next time you login to your desktop, Bitcoin Core GUI will be
-automatically started as an icon in the tray.
-
-![Bitcoin-Qt Tray Icon](/img/full-node/en-bitcoin-qt-tray-icon.png?{{site.time | date: '%s'}})
-</div>
-
-{{installFinished}}
-
-#### Bitcoin Core Daemon {#ubuntu-daemon}
-{:.no_toc}
-
-If you're logged in as an administrative user with sudo access, you may
-log out.  The steps in this section should be performed as the user you
-want to run Bitcoin Core. (If you're an expert administrator, you can
-make this a locked account used only by Bitcoin Core.)
-
-From the terminal, type:
-
-    bitcoind -daemon
-
-It will print a message that Bitcoin Core is starting.  To interact with
-Bitcoin Core daemon, you will use the command `bitcoin-cli` (Bitcoin
-command line interface).
-{{start_up_and_recommended_commands}}
-
-For example, to safely stop your node, run the following command:
-
-    bitcoin-cli stop
-
-{{complete_list_of_commands_and_ibd}}
-
-<div class="box" markdown="1">
-*Optional: Start Your Node At Boot*
-
-Starting your node automatically each time your computer boots makes it
-easy for you to contribute to the network.  The easiest way to do this
-is to start Bitcoin Core daemon from your crontab.  To edit your
-crontab, run the following command:
-
-    crontab -e
-
-Scroll to the bottom of the file displayed and add the following line:
-
-    @reboot bitcoind -daemon
-
-Save the file and exit; the updated crontab file will be installed for
-you. Now Bitcoin Core daemon will be automatically started each time
-your reboot your computer.
-
-If you're an Ubuntu expert and want to use an init script instead, see
-[this Upstart
-script](https://github.com/bitcoin/bitcoin/tree/0.13/contrib/init/bitcoind.conf).
-</div>
-
-{{installFinished}}
-
-### Other Linux Distributions
-
-*Instructions for Bitcoin Core 0.14.2
 
 The following instructions describe installing Bitcoin Core using tools
 available in most mainstream Linux distributions.  We assume you use a
@@ -454,9 +270,9 @@ followed by the argument `xzf` followed by the file name. The argument
 `xzf` means eXtract the gZipped tar archive File. For example, for a
 64-bit tar archive in your current directory, the command is:
 
-    tar xzf bitcoin-0.14.2-x86_64-linux-gnu.tar.gz
+    tar xzf bitcoin-0.18.0-x86_64-linux-gnu.tar.gz
 
-This will create the directory `bitcoin-0.14.2` within your current
+This will create the directory `bitcoin-0.18.0` within your current
 working directory. We will install the contents of its `bin`
 subdirectory into the `/usr/local/bin` directory using the the `install`
 command. The install command is part of the GNU coreutils available on
@@ -467,11 +283,11 @@ commands below to use a different location).
 If you use `sudo` to run commands as root, use the following command
 line:
 
-    sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.14.2/bin/*
+    sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.18.0/bin/*
 
 If you use `su` to run commands as root, use the following command line:
 
-    su -c 'install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.14.2/bin/*'
+    su -c 'install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.18.0/bin/*'
 
 <div class="box" markdown="1">
 *To continue, choose one of the following options*
@@ -491,8 +307,7 @@ If you use `su` to run commands as root, use the following command line:
 
 </div>
 
-#### Bitcoin Core GUI {#other-linux-gui}
-{:.no_toc}
+### Bitcoin Core GUI {#other-linux-gui}
 
 In order to use Bitcoin Core GUI, you will need several libraries
 installed. All of them should be available in all major
@@ -558,8 +373,7 @@ here](https://en.wikibooks.org/wiki/Guide_to_X11/Starting_Sessions).
 
 {{installFinished}}
 
-#### Bitcoin Core Daemon {#other-linux-daemon}
-{:.no_toc}
+### Bitcoin Core Daemon {#other-linux-daemon}
 
 If you're logged in as an administrative user with sudo access, you may
 log out.  The steps in this section should be performed as the user you
@@ -601,7 +415,7 @@ you. On most distributions, this will cause Bitcoin Core daemon to be
 automatically started each time your reboot your computer.
 
 If you're a expert system administrator and want to use an init script instead, see
-[the init scripts directory in Bitcoin Core's source tree](https://github.com/bitcoin/bitcoin/tree/0.13/contrib/init).
+[the init scripts directory in Bitcoin Core's source tree](https://github.com/bitcoin/bitcoin/tree/master/contrib/init).
 </div>
 
 {{installFinished}}
@@ -612,8 +426,6 @@ If you're a expert system administrator and want to use an init script instead, 
 ## Windows Instructions
 
 ### Windows 10
-
-*Instructions for Bitcoin Core 0.14.2 on Windows 10
 
 Go to the [Bitcoin Core download page](/en/download) and verify you have
 made a secure connection to the server.
@@ -767,8 +579,6 @@ daemon will be automatically started.
 
 ### Windows 8.x
 
-*Instructions for Bitcoin Core 0.14.2 on Windows 8 and 8.1.*
-
 Go to the [Bitcoin Core download page](/en/download) and verify you have
 made a secure connection to the server.
 
@@ -921,8 +731,6 @@ daemon will be automatically started.
 
 ### Windows 7
 
-*Instructions for Bitcoin Core 0.14.2
-
 Go to the [Bitcoin Core download page](/en/download) and verify you have
 made a secure connection to the server.
 
@@ -1042,14 +850,6 @@ For example, to safely stop your node, run the following command:
 
 {{complete_list_of_commands_and_ibd}}
 
-
-When Bitcoin Core daemon first starts, it will begin to download the block
-chain. This step will take at least several days, and it may take much more time
-on a slow Internet connection or with a slow computer. During the download,
-Bitcoin Core will use a significant part of your connection bandwidth. You can
-stop Bitcoin Core at any time using the stop command; it will resume from the
-point where it stopped the next time you start it.
-
 <div class="box" markdown="1">
 *Optional: Start Your Node At Boot*
 
@@ -1081,9 +881,7 @@ Save the file. The next time you login to your computer, Bitcoin Core daemon wil
 
 ## Mac OS X Instructions
 
-### Mac OS X Yosemite 10.10.x
-
-*Instructions for Bitcoin Core 0.14.2 on Mac OS X Yosemite*
+### Mac OS X Yosemite 10.10.x+
 
 Go to the [Bitcoin Core download page](/en/download) and verify you have
 made a secure connection to the server.
@@ -1413,7 +1211,7 @@ the DHCP assignment table in the subsection above.
 
 Login to your router using the same steps described near the top of the
 [DHCP subsection](#configuring-dhcp).  Look for an option called Port Forwarding, Port
-Assignment, or anything with "Port" in its name.  On the some routers,
+Assignment, or anything with "Port" in its name.  On some routers,
 this option is buried in an Applications & Gaming menu.
 
 The port forwarding settings should allow you to map an external port on
@@ -1545,8 +1343,8 @@ blocks could be served to other nodes.
 
 Some node operators need to deal with bandwidth caps imposed by their ISPs.
 
-By default, bitcoin-core allows up to 125 connections to different peers, 8 of
-which are outbound. You can therefore, have at most 117 inbound connections.
+By default, Bitcoin Core allows up to 125 connections to different peers, 8 of
+which are outbound. You can therefore have at most 117 inbound connections.
 
 The default settings can result in relatively significant traffic consumption.
 
@@ -1565,7 +1363,7 @@ This is *not* a hard limit; only a threshold to minimize the outbound
 traffic. When the limit is about to be reached, the uploaded data is cut by no
 longer serving historic blocks (blocks older than one week).
 Keep in mind that new nodes require other nodes that are willing to serve
-historic blocks. **The recommended minimum is 144 blocks per day (max. 144MB
+historic blocks. **The recommended minimum is 144 blocks per day (max. 144MiB
 per day)**
 
 #### Disable listening
@@ -1585,7 +1383,7 @@ blocks and transactions to fewer nodes.
 {% endhighlight %}
 
 Reducing the maximum connected nodes to a minimum could be desirable if traffic
-limits are tiny. Keep in mind that bitcoin's trustless model works best if you are
+limits are tiny. Keep in mind that Bitcoin's trustless model works best if you are
 connected to a handful of nodes.
 
 #### Blocks-only mode
