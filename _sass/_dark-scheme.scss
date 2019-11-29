@@ -1,4 +1,3 @@
-/* This stylesheet is used when a user selects to use dark mode in their OS */
 
 /* General darken resets */
 html,body,input,textarea,select,button {
@@ -10,9 +9,9 @@ html,body,input,textarea,select,button {
     color: #e8e6e3;
 }
 
-/*a {
-    color: #3391ff;
-}*/
+a {
+    color: rgb(83, 167, 234);
+}
 
 h3,h4,h5 {
        color: rgb(222, 220, 215);
@@ -66,6 +65,12 @@ table {
     border-color: rgb(57, 57, 57);
 }
 
+@media handheld, only screen and (max-width: 67.5em), only screen and (max-device-width: 67.5em) {
+    .menusimple {
+        border-top-color: rgb(58, 58, 58);
+        border-bottom-color: rgb(58, 58, 58);
+     }
+}
 /* Language drop down menu */
 .lang li a, .lang li a:link, .lang li a:visited, .lang li a:active {
     color: rgb(222, 220, 215);
@@ -86,9 +91,9 @@ table {
 .content {
     background-color: rgb(24, 26, 27);
 }
-
 .column-text p,
-.toccontent p {
+.toccontent p,
+.introlink {
     color: rgb(199, 195, 187);
 }
 
@@ -102,6 +107,18 @@ table {
 
 .card h2 {
     color: #FF7E00;
+}
+
+.organization-img {
+    border-color: rgb(57,57,57);
+}
+
+.organization-country {
+    color: rgb(222, 220, 215);
+}
+
+.community-row {
+    border-bottom-color: rgb(57, 57, 57);
 }
 
 .develdocdisclaimer {
