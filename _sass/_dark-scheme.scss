@@ -65,12 +65,6 @@ table {
     border-color: rgb(57, 57, 57);
 }
 
-@media handheld, only screen and (max-width: 67.5em), only screen and (max-device-width: 67.5em) {
-    .menusimple {
-        border-top-color: rgb(58, 58, 58);
-        border-bottom-color: rgb(58, 58, 58);
-     }
-}
 /* Language drop down menu */
 .lang li a, .lang li a:link, .lang li a:visited, .lang li a:active {
     color: rgb(222, 220, 215);
@@ -99,6 +93,11 @@ table {
 
 .toc div > ul > li > a  {
     color: rgb(222, 220, 215);
+}
+
+.toc + .toccontent,
+.toccontent-block {
+    border-left-color: rgb(57, 57, 57);
 }
 
 .card {
