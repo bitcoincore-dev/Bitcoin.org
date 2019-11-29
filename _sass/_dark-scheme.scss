@@ -1,6 +1,8 @@
 /* This stylesheet is used when a user selects to use dark mode in their OS */
 /* media query for this check is in screen.scss and calls this _dark-scheme partial if true */
-html,body,input,textarea,select,button,.mainhero {
+
+/* General darken resets */
+html,body,input,textarea,select,button {
     background-color: #090c13
 }
 
@@ -9,20 +11,25 @@ html,body,input,textarea,select,button {
     color: #e8e6e3
 }
 
-.mainsummary {
-    color: #e8e6e3
-}
-
-.head {
-    background: #090c14
-}
-
 a {
     color: #3391ff
 }
 
 table {
     border-color: #4c4c4c
+}
+
+/* Specific blocks */
+.mainhero,.mainoverview,.maindesc {
+    background-color: #090c13
+}
+
+.mainsummary {
+    color: #e8e6e3
+}
+
+.head {
+    background: #090c14
 }
 
 /* Top main menu */
