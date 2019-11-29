@@ -1,24 +1,20 @@
 /* This stylesheet is used when a user selects to use dark mode in their OS */
 /* media query for this check is in screen.scss and calls this _dark-scheme partial if true */
-html, body, input, textarea, select, button, .mainhero {
-    background-color: #181a1b
+html,body,input,textarea,select,button,.mainhero {
+    background-color: #090c13
 }
 
-html, body, input, textarea, select, button {
+html,body,input,textarea,select,button {
     border-color: #575757;
     color: #e8e6e3
 }
 
 .mainsummary {
-     color: #e8e6e3
+    color: #e8e6e3
 }
 
 .head {
-    background: rgb(24, 26, 27)
-}
-
-.menusimple>li a, .menusimple>li a:active, .menusimple>li a:visited, .menusimple>li a:link {
-    color: rgb(222, 220, 215);
+    background: #090c14
 }
 
 a {
@@ -29,6 +25,34 @@ table {
     border-color: #4c4c4c
 }
 
+/* Top main menu */
+.menusimple > li a, .menusimple > li a:active, .menusimple > li a:visited, .menusimple > li a:link, .menusimple > li a:hover {
+    color: rgb(222, 220, 215);
+}
+
+.menusimple > li ul {
+    background-color: rgb(24, 26, 27);
+    border-color: rgb(57, 57, 57);
+}
+
+/* Language drop down menu */
+.lang li a, .lang li a:link, .lang li a:visited, .lang li a:active {
+    color: rgb(222, 220, 215);
+}
+
+.lang li ul li a:hover {
+    color: rgb(232, 230, 227);
+    background-image: initial;
+    background-color: rgb(33, 35, 37);
+}
+
+.lang li ul li a:hover {
+    color: rgb(232, 230, 227);
+    background-image: initial;
+    background-color: rgb(33, 35, 37);
+}
+
+/* browser elements */
 ::placeholder {
     color: #bab5ab
 }
@@ -43,7 +67,7 @@ table {
     color: #ffffff
 }
 
-input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+input:-webkit-autofill,textarea:-webkit-autofill,select:-webkit-autofill {
     background-color: #545b00 !important;
     color: #e8e6e3 !important
 }
