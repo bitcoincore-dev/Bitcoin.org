@@ -26,8 +26,18 @@ table {
 }
 
 /* Top main menu */
-.menusimple > li a, .menusimple > li a:active, .menusimple > li a:visited, .menusimple > li a:link, .menusimple > li a:hover {
+.menusimple>li a,.menusimple>li a:active,.menusimple>li a:visited,.menusimple>li a:link {
+    color: rgb(222, 220, 215)
+}
+
+.menusimple > li a:hover,.menusimple>li>ul li:hover,
+.menusimple li:hover>a, .menusimple li.active>a {
     color: rgb(222, 220, 215);
+}
+
+.menusimple>li>ul li:hover {
+    background-image: initial;
+    background-color: rgb(33, 35, 37);
 }
 
 .menusimple > li ul {
@@ -40,19 +50,18 @@ table {
     color: rgb(222, 220, 215);
 }
 
-.lang li ul li a:hover {
-    color: rgb(232, 230, 227);
-    background-image: initial;
-    background-color: rgb(33, 35, 37);
+.lang li ul {
+   background-color: rgb(33, 35, 37);
+   border-color: rgb(57, 57, 57);
 }
 
-.lang li ul li a:hover {
+.lang li ul li a:hover,
+.lang:hover li a {
     color: rgb(232, 230, 227);
-    background-image: initial;
-    background-color: rgb(33, 35, 37);
+    background: rgb(33, 35, 37);
 }
 
-/* browser elements */
+/* Browser elements / BOM */
 ::placeholder {
     color: #bab5ab
 }
