@@ -1,40 +1,43 @@
 /* This stylesheet is used when a user selects to use dark mode in their OS */
-/* media query for this check is in screen.scss and calls this _dark-scheme partial if true */
 
 /* General darken resets */
 html,body,input,textarea,select,button {
-    background-color: #090c13
+    background-color: #090c14;
 }
 
 html,body,input,textarea,select,button {
     border-color: #575757;
-    color: #e8e6e3
+    color: #e8e6e3;
 }
 
-a {
-    color: #3391ff
+/*a {
+    color: #3391ff;
+}*/
+
+h3,h4,h5 {
+       color: rgb(222, 220, 215);
 }
 
 table {
-    border-color: #4c4c4c
+    border-color: #4c4c4c;
 }
 
 /* Specific blocks */
 .mainhero,.mainoverview,.maindesc {
-    background-color: #090c13
+    background-color: #090c14;
 }
 
 .mainsummary {
-    color: #e8e6e3
+    color: #e8e6e3;
 }
 
 .head {
-    background: #090c14
+    background: #090c14;
 }
 
 /* Top main menu */
 .menusimple>li a,.menusimple>li a:active,.menusimple>li a:visited,.menusimple>li a:link {
-    color: rgb(222, 220, 215)
+    color: rgb(222, 220, 215);
 }
 
 .menusimple > li a:hover,.menusimple>li>ul li:hover,
@@ -68,9 +71,26 @@ table {
     background: rgb(33, 35, 37);
 }
 
+/* Inner pages */
+.content {
+    background-color: rgb(24, 26, 27);
+}
+
+toc div > ul > li > a {
+    color: rgb(222, 220, 215);
+}
+
+.card {
+    border-color: rgb(58, 58, 58);
+}
+
+.card h2 {
+    color: #FF7E00;
+}
+
 /* Browser elements / BOM */
 ::placeholder {
-    color: #bab5ab
+    color: #bab5ab;
 }
 
 ::selection {
@@ -80,35 +100,35 @@ table {
 
 ::-moz-selection {
     background-color: #005ccc;
-    color: #ffffff
+    color: #ffffff;
 }
 
 input:-webkit-autofill,textarea:-webkit-autofill,select:-webkit-autofill {
     background-color: #545b00 !important;
-    color: #e8e6e3 !important
+    color: #e8e6e3 !important;
 }
 
 ::-webkit-scrollbar {
     background-color: #1c1e1f;
-    color: #c5c1b9
+    color: #c5c1b9;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #2a2c2e
+    background-color: #2a2c2e;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #323537
+    background-color: #323537;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background-color: #3d4043
+    background-color: #3d4043;
 }
 
 ::-webkit-scrollbar-corner {
-    background-color: #181a1b
+    background-color: #181a1b;
 }
 
 * {
-    scrollbar-color: #2a2c2e #1c1e1f
+    scrollbar-color: #2a2c2e #1c1e1f;
 }
