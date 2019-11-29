@@ -22,6 +22,12 @@ table {
     border-color: #4c4c4c;
 }
 
+.btn-light {
+    color: rgb(255, 152, 51);
+    background-color: rgb(24, 26, 27);
+    border-color: rgb(204, 101, 0);
+}
+
 /* Specific blocks */
 .mainhero,.mainoverview,.maindesc {
     background-color: #090c14;
@@ -33,6 +39,11 @@ table {
 
 .head {
     background: #090c14;
+}
+
+.maindesc-text,
+.mainlist-item p {
+    color: rgb(199, 195, 187);
 }
 
 /* Top main menu */
@@ -76,7 +87,12 @@ table {
     background-color: rgb(24, 26, 27);
 }
 
-toc div > ul > li > a {
+.column-text p,
+.toccontent p {
+    color: rgb(199, 195, 187);
+}
+
+.toc div > ul > li > a  {
     color: rgb(222, 220, 215);
 }
 
@@ -86,6 +102,14 @@ toc div > ul > li > a {
 
 .card h2 {
     color: #FF7E00;
+}
+
+.develdocdisclaimer {
+    background-color: rgb(58, 29, 0);
+}
+
+.develdocdisclaimer b {
+    color: rgb(248, 164, 61);
 }
 
 /* Browser elements / BOM */
