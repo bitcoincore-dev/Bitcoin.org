@@ -1,26 +1,33 @@
+/*** 
+Dark style guide
+
+Goal: Overwrite rules from main.css only and avoid adding any new spacing/alignment/layout.
+
+Colors:
+default bg color: #090c14;
+
+default link color: rgb(83, 167, 234);
+
+body paragraph color: rgb(199, 195, 187);
+
+border color (besides <table>): rgb(57, 57, 57);
+***/
 
 /* General darken resets */
 html,body,input,textarea,select,button {
-    background-color: #090c14;
-}
-
-html,body,input,textarea,select,button {
     border-color: #575757;
     color: #e8e6e3;
+    background-color: #090c14;
 }
-
 a {
     color: rgb(83, 167, 234);
 }
-
 h3,h4,h5 {
        color: rgb(222, 220, 215);
 }
-
 table {
     border-color: #4c4c4c;
 }
-
 .btn-light {
     color: rgb(255, 152, 51);
     background-color: rgb(24, 26, 27);
@@ -28,53 +35,56 @@ table {
 }
 
 /* Specific blocks */
-.mainhero,.mainoverview,.maindesc {
+.mainhero,
+.mainoverview,
+.maindesc,
+.head {
     background-color: #090c14;
 }
-
 .mainsummary {
     color: #e8e6e3;
 }
-
-.head {
-    background: #090c14;
-}
-
 .maindesc-text,
 .mainlist-item p {
     color: rgb(199, 195, 187);
 }
 
 /* Top main menu */
-.menusimple>li a,.menusimple>li a:active,.menusimple>li a:visited,.menusimple>li a:link {
+.menusimple {
+    border-color: rgb(57, 57, 57);
+}
+.menusimple>li a,
+.menusimple>li a:active,
+.menusimple>li a:visited,
+.menusimple>li a:link {
     color: rgb(222, 220, 215);
 }
-
-.menusimple > li a:hover,.menusimple>li>ul li:hover,
-.menusimple li:hover>a, .menusimple li.active>a {
+.menusimple > li a:hover,
+.menusimple>li>ul li:hover,
+.menusimple li:hover>a,
+.menusimple li.active>a {
     color: rgb(222, 220, 215);
 }
-
 .menusimple>li>ul li:hover {
     background-image: initial;
     background-color: rgb(33, 35, 37);
 }
-
 .menusimple > li ul {
     background-color: rgb(24, 26, 27);
     border-color: rgb(57, 57, 57);
 }
 
 /* Language drop down menu */
-.lang li a, .lang li a:link, .lang li a:visited, .lang li a:active {
+.lang li a,
+.lang li a:link,
+.lang li a:visited,
+.lang li a:active {
     color: rgb(222, 220, 215);
 }
-
 .lang li ul {
    background-color: rgb(33, 35, 37);
    border-color: rgb(57, 57, 57);
 }
-
 .lang li ul li a:hover,
 .lang:hover li a {
     color: rgb(232, 230, 227);
@@ -90,40 +100,35 @@ table {
 .introlink {
     color: rgb(199, 195, 187);
 }
-
-.toc div > ul > li > a  {
+.toc div > ul > li > a,
+.toc div > ul > li > ul a {
     color: rgb(222, 220, 215);
 }
-
 .toc + .toccontent,
 .toccontent-block {
     border-left-color: rgb(57, 57, 57);
 }
-
-.card {
-    border-color: rgb(58, 58, 58);
+.boxexpand.expanded>h1:first-child,
+.boxexpand.expanded>h2:first-child,
+.boxexpand.expanded>h3:first-child {
+    background-color: rgb(24, 26, 27);
 }
-
 .card h2 {
     color: #FF7E00;
 }
-
+.card,
 .organization-img {
-    border-color: rgb(57,57,57);
+    border-color: rgb(57, 57, 57);
 }
-
 .organization-country {
     color: rgb(222, 220, 215);
 }
-
 .community-row {
     border-bottom-color: rgb(57, 57, 57);
 }
-
 .develdocdisclaimer {
     background-color: rgb(58, 29, 0);
 }
-
 .develdocdisclaimer b {
     color: rgb(248, 164, 61);
 }
@@ -132,43 +137,36 @@ table {
 ::placeholder {
     color: #bab5ab;
 }
-
 ::selection {
     background-color: #005ccc;
     color: #ffffff;
 }
-
 ::-moz-selection {
     background-color: #005ccc;
     color: #ffffff;
 }
-
-input:-webkit-autofill,textarea:-webkit-autofill,select:-webkit-autofill {
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
     background-color: #545b00 !important;
     color: #e8e6e3 !important;
 }
-
 ::-webkit-scrollbar {
     background-color: #1c1e1f;
     color: #c5c1b9;
 }
-
 ::-webkit-scrollbar-thumb {
     background-color: #2a2c2e;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background-color: #323537;
 }
-
 ::-webkit-scrollbar-thumb:active {
     background-color: #3d4043;
 }
-
 ::-webkit-scrollbar-corner {
     background-color: #181a1b;
 }
-
 * {
     scrollbar-color: #2a2c2e #1c1e1f;
 }
