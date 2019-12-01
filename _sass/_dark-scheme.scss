@@ -2,36 +2,40 @@
 Dark style guide
 
 Goal: Overwrite rules from main.css only and avoid adding any new spacing/alignment/layout.
-
-Colors:
-default bg color: #090c14;
-
-default link color: rgb(83, 167, 234);
-
-body paragraph color: rgb(199, 195, 187);
-
-border color (besides <table>): rgb(57, 57, 57);
 ***/
+
+:root {
+    --primary-dark-color: rgb(83, 167, 234);
+    --secondary-dark-color: rgb(57, 57, 57);
+    --font-dark-color: rgb(199, 195, 187);
+    --bg-dark-color: #090c14;
+    --heading-dark-color: rgb(222, 220, 215);
+    --accent-dark-color:  rgb(33, 35, 37);
+    --accent-bg-dark-color: rgb(24, 26, 27);
+    --orange-dark: rgb(204, 101, 0);
+    --orange-dark-light: rgb(255, 152, 51);
+    --warning-bg-dark: rgb(58, 29, 0);
+}
 
 /* General darken resets */
 html,body,input,textarea,select,button {
-    border-color: #575757;
-    color: #e8e6e3;
-    background-color: #090c14;
+    border-color: var(--secondary-dark-color);
+    color: var(--font-dark-color);
+    background-color: var(--bg-dark-color);
 }
 a {
-    color: rgb(83, 167, 234);
+    color: var(--primary-dark-color);
 }
 h3,h4,h5 {
-       color: rgb(222, 220, 215);
+       color: var(--heading-dark-color);
 }
 table {
-    border-color: #4c4c4c;
+    border-color: var(--bg-dark-color);
 }
 .btn-light {
-    color: rgb(255, 152, 51);
-    background-color: rgb(24, 26, 27);
-    border-color: rgb(204, 101, 0);
+    color: var(--orange-dark-light);
+    background-color: var(--accent-bg-dark-color);
+    border-color: var(--orange-dark);
 }
 
 /* Specific blocks */
@@ -39,39 +43,38 @@ table {
 .mainoverview,
 .maindesc,
 .head {
-    background-color: #090c14;
+    background-color: var(--bg-dark-color);
 }
 .mainsummary {
-    color: #e8e6e3;
+    color: var(--font-dark-color);
 }
 .maindesc-text,
 .mainlist-item p {
-    color: rgb(199, 195, 187);
+    color: var(--heading-dark-color);
 }
 
 /* Top main menu */
 .menusimple {
-    border-color: rgb(57, 57, 57);
+    border-color: var(--secondary-dark-color);
 }
 .menusimple>li a,
 .menusimple>li a:active,
 .menusimple>li a:visited,
 .menusimple>li a:link {
-    color: rgb(222, 220, 215);
+    color: var(--heading-dark-color);
 }
 .menusimple > li a:hover,
 .menusimple>li>ul li:hover,
 .menusimple li:hover>a,
 .menusimple li.active>a {
-    color: rgb(222, 220, 215);
+    color: var(--heading-dark-color);
 }
 .menusimple>li>ul li:hover {
-    background-image: initial;
-    background-color: rgb(33, 35, 37);
+    background-color: var(--accent-dark-color);
 }
 .menusimple > li ul {
-    background-color: rgb(24, 26, 27);
-    border-color: rgb(57, 57, 57);
+    background-color: var(--accent-bg-dark-color);
+    border-color: var(--secondary-dark-color);
 }
 
 /* Language drop down menu */
@@ -79,58 +82,58 @@ table {
 .lang li a:link,
 .lang li a:visited,
 .lang li a:active {
-    color: rgb(222, 220, 215);
+    color: var(--heading-dark-color);
 }
 .lang li ul {
-   background-color: rgb(33, 35, 37);
-   border-color: rgb(57, 57, 57);
+   background-color: var(--accent-dark-color);
+   border-color: -var(--secondary-dark-color);
 }
 .lang li ul li a:hover,
 .lang:hover li a {
     color: rgb(232, 230, 227);
-    background: rgb(33, 35, 37);
+    background: var(--accent-dark-color);
 }
 
 /* Inner pages */
 .content {
-    background-color: rgb(24, 26, 27);
+    background-color: var(--accent-bg-dark-color);
 }
 .column-text p,
 .toccontent p,
 .introlink {
-    color: rgb(199, 195, 187);
+    color: var(--font-dark-color);
 }
 .toc div > ul > li > a,
 .toc div > ul > li > ul a {
-    color: rgb(222, 220, 215);
+    color: var(--heading-dark-color);
 }
 .toc + .toccontent,
 .toccontent-block {
-    border-left-color: rgb(57, 57, 57);
+    border-left-color: var(--secondary-dark-color);
 }
 .boxexpand.expanded>h1:first-child,
 .boxexpand.expanded>h2:first-child,
 .boxexpand.expanded>h3:first-child {
-    background-color: rgb(24, 26, 27);
+    background-color: var(--accent-bg-dark-color);
 }
 .card h2 {
-    color: #FF7E00;
+    color: var(--orange-dark);
 }
 .card,
 .organization-img {
-    border-color: rgb(57, 57, 57);
+    border-color: var(--secondary-dark-color);
 }
 .organization-country {
-    color: rgb(222, 220, 215);
+    color: var(--heading-dark-color);
 }
 .community-row {
-    border-bottom-color: rgb(57, 57, 57);
+    border-bottom-color: var(--secondary-dark-color);
 }
 .develdocdisclaimer {
-    background-color: rgb(58, 29, 0);
+    background-color: var(--warning-dark-bg);
 }
 .develdocdisclaimer b {
-    color: rgb(248, 164, 61);
+    color: var(--orange-dark-light);
 }
 
 /* Browser elements / BOM */
