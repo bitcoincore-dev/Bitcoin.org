@@ -300,7 +300,6 @@ function darkThemeToggle() {
       localStorage.setItem('theme', 'default');
     }
   }
-
   toggleSwitch.addEventListener('change', switchTheme, false);
 }
 
