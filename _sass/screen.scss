@@ -339,6 +339,41 @@ hr {
     color: #000;
     background: #DFDFDF;
 }
+
+.dark-theme-toggle input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+.dark-theme-toggle::before {
+    background-image: url(moon-regular.svg);
+    height: 30px;
+    width: 30px;
+    content: "";
+    background-repeat: no-repeat;
+    cursor: pointer;
+    /*  transition: .4s;  */
+    display: block;
+}
+html[data-theme="dark"] .dark-theme-toggle::before {
+    background-image: url(moon-solid.svg);
+    -moz-transform: scaleX(-1);
+    /* Gecko */
+    -o-transform: scaleX(-1);
+    /* Opera */
+    -webkit-transform: scaleX(-1);
+    /* Webkit */
+    transform: scaleX(-1);
+    /* Standard */
+    filter: FlipH;
+    /* IE 6/7/8 */
+}
+
 .logo{
     margin-right: auto;
 }
@@ -5034,3 +5069,7 @@ br.big {
 @import 'wallet-selector';
 @import 'helper';
 @import 'donation-banner';
+
+@media screen and (prefers-color-scheme: dark) {
+    @import 'dark-scheme';
+}

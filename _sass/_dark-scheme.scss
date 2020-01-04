@@ -1,0 +1,175 @@
+/*** 
+Dark style guide
+
+Goal: Overwrite rules from main.css only and avoid adding any new spacing/alignment/layout.
+***/
+
+:root {
+    --primary-dark-color: rgb(83, 167, 234);
+    --secondary-dark-color: rgb(57, 57, 57);
+    --font-dark-color: rgb(199, 195, 187);
+    --bg-dark-color: #090c14;
+    --heading-dark-color: rgb(222, 220, 215);
+    --accent-dark-color:  rgb(33, 35, 37);
+    --accent-bg-dark-color: rgb(24, 26, 27);
+    --orange-dark: rgb(204, 101, 0);
+    --orange-dark-light: rgb(255, 152, 51);
+    --warning-bg-dark: rgb(58, 29, 0);
+}
+
+/* General darken resets */
+html,body,input,textarea,select,button {
+    border-color: var(--secondary-dark-color);
+    color: var(--font-dark-color);
+    background-color: var(--bg-dark-color);
+}
+a {
+    color: var(--primary-dark-color);
+}
+h3,h4,h5 {
+       color: var(--heading-dark-color);
+}
+table {
+    border-color: var(--bg-dark-color);
+}
+.btn-light {
+    color: var(--orange-dark-light);
+    background-color: var(--accent-bg-dark-color);
+    border-color: var(--orange-dark);
+}
+
+/* Specific blocks */
+.mainhero,
+.mainoverview,
+.maindesc,
+.head {
+    background-color: var(--bg-dark-color);
+}
+.mainsummary {
+    color: var(--font-dark-color);
+}
+.maindesc-text,
+.mainlist-item p {
+    color: var(--heading-dark-color);
+}
+
+/* Top main menu */
+.menusimple {
+    border-color: var(--secondary-dark-color);
+}
+.menusimple>li a,
+.menusimple>li a:active,
+.menusimple>li a:visited,
+.menusimple>li a:link {
+    color: var(--heading-dark-color);
+}
+.menusimple > li a:hover,
+.menusimple>li>ul li:hover,
+.menusimple li:hover>a,
+.menusimple li.active>a {
+    color: var(--heading-dark-color);
+}
+.menusimple>li>ul li:hover {
+    background-color: var(--accent-dark-color);
+}
+.menusimple > li ul {
+    background-color: var(--accent-bg-dark-color);
+    border-color: var(--secondary-dark-color);
+}
+
+/* Language drop down menu */
+.lang li a,
+.lang li a:link,
+.lang li a:visited,
+.lang li a:active {
+    color: var(--heading-dark-color);
+}
+.lang li ul {
+   background-color: var(--accent-dark-color);
+   border-color: -var(--secondary-dark-color);
+}
+.lang li ul li a:hover,
+.lang:hover li a {
+    color: rgb(232, 230, 227);
+    background: var(--accent-dark-color);
+}
+
+/* Inner pages */
+.content {
+    background-color: var(--accent-bg-dark-color);
+}
+.column-text p,
+.toccontent p,
+.introlink {
+    color: var(--font-dark-color);
+}
+.toc div > ul > li > a,
+.toc div > ul > li > ul a {
+    color: var(--heading-dark-color);
+}
+.toc + .toccontent,
+.toccontent-block {
+    border-left-color: var(--secondary-dark-color);
+}
+.boxexpand.expanded>h1:first-child,
+.boxexpand.expanded>h2:first-child,
+.boxexpand.expanded>h3:first-child {
+    background-color: var(--accent-bg-dark-color);
+}
+.card h2 {
+    color: var(--orange-dark);
+}
+.card,
+.organization-img {
+    border-color: var(--secondary-dark-color);
+}
+.organization-country {
+    color: var(--heading-dark-color);
+}
+.community-row {
+    border-bottom-color: var(--secondary-dark-color);
+}
+.develdocdisclaimer {
+    background-color: var(--warning-dark-bg);
+}
+.develdocdisclaimer b {
+    color: var(--orange-dark-light);
+}
+
+/* Browser elements / BOM */
+::placeholder {
+    color: #bab5ab;
+}
+::selection {
+    background-color: #005ccc;
+    color: #ffffff;
+}
+::-moz-selection {
+    background-color: #005ccc;
+    color: #ffffff;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #545b00 !important;
+    color: #e8e6e3 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1c1e1f;
+    color: #c5c1b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2a2c2e;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #323537;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #3d4043;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+* {
+    scrollbar-color: #2a2c2e #1c1e1f;
+}
