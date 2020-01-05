@@ -339,21 +339,24 @@ hr {
     color: #000;
     background: #DFDFDF;
 }
- 
+.dark-theme-toggle {
+    position: relative;
+    margin-left: 30px;
+}
 .dark-theme-toggle input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    top: 4px;
-    left: 4px;
+    top: 0;
+    left: 30px;
 }
 .dark-theme-toggle::before {
-    background-image: url(moon-regular.svg);
-    height: 30px;
-    width: 30px;
+    background-image: url(/img/icons/moon-regular.svg);
+    height: 20px;
+    width: 20px;
     content: "";
     background-repeat: no-repeat;
     cursor: pointer;
@@ -361,7 +364,7 @@ hr {
     display: block;
 }
 html[data-theme="dark"] .dark-theme-toggle::before {
-    background-image: url(moon-solid.svg);
+    background-image: url(/img/icons/moon-solid.svg);
     -moz-transform: scaleX(-1);
     /* Gecko */
     -o-transform: scaleX(-1);
@@ -5093,3 +5096,6 @@ br.big {
 @media screen and (prefers-color-scheme: dark) {
     @import 'dark-scheme';
 }
+html[data-theme="dark"] {
+    @import 'dark-scheme'; 
+} 

@@ -279,8 +279,8 @@ function trackOutgoingLinks() {
 }
 
 function darkThemeToggle() {
-  const toggleSwitch = document.querySelector('.dark-theme-toggle input[type="checkbox"]');
-  const currentTheme = localStorage.getItem('theme');
+  var toggleSwitch = document.querySelector('.dark-theme-toggle input[type="checkbox"]');
+  var currentTheme = localStorage.getItem('theme');
 
   if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
