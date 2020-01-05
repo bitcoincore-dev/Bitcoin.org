@@ -303,4 +303,5 @@ function darkThemeToggle() {
   toggleSwitch.addEventListener('change', switchTheme, false);
 }
 
+
 /* jshint ignore:end */
