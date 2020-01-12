@@ -1,159 +1,188 @@
 /*** 
 Dark style guide
 
-Goal: Overwrite rules from main.css only and avoid adding any new spacing/alignment/layout.
+Goals: 
+1) overwrites only and avoid adding any new spacing/alignment/layout
+2) keep repaints fast
+3) avoid javascript for color changes in light of goal 2
+
 ***/
 
+$background: #090c14;
+$touch-bg: #121212;
+$text: #fff;
+$primary: #53a7ea;
+$primary-variant: #cc6500;
+$secondary: #ff9833;
+$error: #cf6679;
+$high-emphasis-opacity: 87%;
+$med-emphasis-opactiy: 60%;
+$disabled-emphasis-opacity: 38%;
+
+/*
 :root {
-    --primary-dark-color: rgb(83, 167, 234);
+    --primary-dark-color: #53a7ea;
     --secondary-dark-color: rgb(57, 57, 57);
     --font-dark-color: rgb(199, 195, 187);
     --bg-dark-color: #090c14;
     --heading-dark-color: rgb(222, 220, 215);
     --accent-dark-color:  rgb(33, 35, 37);
     --accent-bg-dark-color: rgb(24, 26, 27);
-    --orange-dark: rgb(204, 101, 0);
-    --orange-dark-light: rgb(255, 152, 51);
+    --orange-dark: #cc6500;
+    --orange-dark-light: #ff9833;
     --warning-bg-dark: rgb(58, 29, 0);
 }
-
-/* General darken resets */
-html,body,input,textarea,select,button {
-    border-color: var(--secondary-dark-color);
-    color: var(--font-dark-color);
-    background-color: var(--bg-dark-color);
-}
-a {
-    color: var(--primary-dark-color);
+*/
+body {
+    background-color: $background;
+    color: $text;
+    opacity: $high-emphasis-opacity;
 }
 h3,h4,h5 {
-       color: var(--heading-dark-color);
+    color: $text;
+    opacity: $high-emphasis-opacity;
 }
 table {
-    border-color: var(--bg-dark-color);
+    border-color: $text;
+    opacity: $med-emphasis-opactiy;
 }
 .btn-light {
-    color: var(--orange-dark-light);
-    background-color: var(--accent-bg-dark-color);
-    border-color: var(--orange-dark);
+    background-color: $secondary;
+    border-color: $secondary;
 }
+.btn-bright,
+.btn,
+.btn-light {
+    color: $text;
+    opacity: $high-emphasis-opacity;
+}
+
 
 /* Specific blocks */
 .mainhero,
 .mainoverview,
 .maindesc,
 .head {
-    background-color: var(--bg-dark-color);
-}
-.mainsummary {
-    color: var(--font-dark-color);
+    background-color: $background;
 }
 .maindesc-text,
-.mainlist-item p {
-    color: var(--heading-dark-color);
+.mainlist-item p,
+.mainsummary {
+    color: $text;
+    opacity: $high-emphasis-opacity;
 }
-
+.maincard-link {
+    color: $text;
+    opacity: $med-emphasis-opactiy;
+}
 /* Top main menu */
 .menusimple {
-    border-color: var(--secondary-dark-color);
+    border-color: $text;
+    opacity: $high-emphasis-opacity;
 }
 .menusimple>li a,
 .menusimple>li a:active,
 .menusimple>li a:visited,
 .menusimple>li a:link {
-    color: var(--heading-dark-color);
+    color: $text;
+    opacity: $high-emphasis-opacity;
 }
 .menusimple > li a:hover,
 .menusimple>li>ul li:hover,
 .menusimple li:hover>a,
 .menusimple li.active>a {
-    color: var(--heading-dark-color);
+    color: #fff;
+    opacity: $high-emphasis-opacity;
 }
 .menusimple>li>ul li:hover {
-    background-color: var(--accent-dark-color);
+    background-color: $touch-bg;
 }
 .menusimple > li ul {
-    background-color: var(--accent-bg-dark-color);
-    border-color: var(--secondary-dark-color);
-}
+    background-color: $touch-bg;
+    border-color: #fff;
+    opacity: $med-emphasis-opactiy;
+} 
 
 /* Language drop down menu */
 .lang li a,
 .lang li a:link,
 .lang li a:visited,
 .lang li a:active {
-    color: var(--heading-dark-color);
+    color: $text;
+    opacity: $high-emphasis-opacity;
 }
 .lang li ul {
-   background-color: var(--accent-dark-color);
-   border-color: -var(--secondary-dark-color);
+   background-color: $touch-bg;
+   border-color: $text;
+   opacity: $med-emphasis-opactiy;
 }
 .lang li ul li a:hover,
 .lang:hover li a {
-    color: rgb(232, 230, 227);
-    background: var(--accent-dark-color);
+    color: $text;
+    background: inherit;
+    opacity: $med-emphasis-opactiy;
 }
 
 /* Inner pages */
 .content {
-    background-color: var(--accent-bg-dark-color);
+    background-color: $background;
+}
+.toccontent li,
+.post-name,
+.start h2,
+.glossary_term,
+.bitcoin-paper div > p {
+    color: $text;
+    opacity: $high-emphasis-opacity;
+}
+.start p,
+.summary {
+    color: $text;
+    opacity: $med-emphasis-opactiy;
 }
 .column-text p,
 .toccontent p,
-.introlink {
-    color: var(--font-dark-color);
-}
+.introlink,
 .toc div > ul > li > a,
 .toc div > ul > li > ul a {
-    color: var(--heading-dark-color);
-}
+    color: $text;
+    opacity: $high-emphasis-opacity;
+} 
 .toc + .toccontent,
 .toccontent-block {
-    border-left-color: var(--secondary-dark-color);
+    border-left-color: $text;
+    opacity: $high-emphasis-opacity;
 }
 .boxexpand.expanded>h1:first-child,
 .boxexpand.expanded>h2:first-child,
 .boxexpand.expanded>h3:first-child {
-    background-color: var(--accent-bg-dark-color);
+    background-color: $touch-bg;
 }
 .card h2 {
-    color: var(--orange-dark);
+    color: $primary-variant;
 }
-.card,
+.card,                  
 .organization-img {
-    border-color: var(--secondary-dark-color);
+    border-color: $touch-bg;
 }
 .organization-country {
-    color: var(--heading-dark-color);
+    color: $primary-variant;
 }
-.community-row {
-    border-bottom-color: var(--secondary-dark-color);
+.community-row,
+.card p {
+    border-bottom-color:$text;
+    opacity: $high-emphasis-opacity;
 }
 .develdocdisclaimer {
-    background-color: var(--warning-dark-bg);
+    background-color: $error;
 }
-.develdocdisclaimer b {
-    color: var(--orange-dark-light);
+.develdocdisclaimer a {
+    color: $text;
+    text-decoration: underline;
+    opacity: $high-emphasis-opacity;
 }
-
 /* Browser elements / BOM */
-::placeholder {
-    color: #bab5ab;
-}
-::selection {
-    background-color: #005ccc;
-    color: #ffffff;
-}
-::-moz-selection {
-    background-color: #005ccc;
-    color: #ffffff;
-}
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-select:-webkit-autofill {
-    background-color: #545b00 !important;
-    color: #e8e6e3 !important;
-}
+
 ::-webkit-scrollbar {
     background-color: #1c1e1f;
     color: #c5c1b9;

@@ -351,7 +351,7 @@ hr {
     height: 20px;
     position: absolute;
     top: 0;
-    left: 30px;
+    left: 0;
 }
 .dark-theme-toggle::before {
     background-image: url(/img/icons/moon-regular.svg);
@@ -360,7 +360,7 @@ hr {
     content: "";
     background-repeat: no-repeat;
     cursor: pointer;
-    /*  transition: .4s;  */
+    /*  transition: .5s;  */
     display: block;
 }
 html[data-theme="dark"] .dark-theme-toggle::before {
@@ -375,6 +375,7 @@ html[data-theme="dark"] .dark-theme-toggle::before {
     /* Standard */
     filter: FlipH;
     /* IE 6/7/8 */
+    opacity: 87%; /* i.e. $high-emphasis-opacity from _dark-scheme.scss */
 }
 
 .logo{
