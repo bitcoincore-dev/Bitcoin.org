@@ -131,7 +131,8 @@ table {
 .post-name,
 .start h2,
 .glossary_term,
-.bitcoin-paper div > p {
+.bitcoin-paper div > p,
+.footer {
     color: $text;
     opacity: $high-emphasis-opacity;
 }
