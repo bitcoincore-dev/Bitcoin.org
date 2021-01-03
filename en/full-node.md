@@ -1405,9 +1405,16 @@ You will still be able to send transactions from the built-in wallet or from
 peers you've whitelisted using the `-whitelist` parameter.
 </div>
 
+<div class="toccontent-block boxexpand expanded" markdown="1">
+
+## Tor Hidden Service
+
+{% include tor/tor-hidden-service.md %}
+
 </div>
 </div>
 </div>
 <!-- <script>updateToc();</script>
 <script>accordion();</script>
 <script>onScrollButton();</script> -->
+
