@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*** 
 Dark style guide
 
@@ -140,10 +141,49 @@ table {
 ::placeholder {
     color: #bab5ab;
 }
+=======
+=======
+/* This stylesheet is used when a user selects to use dark mode in their OS */
+/* media query for this check is in screen.scss and calls this _dark-scheme partial if true */
+>>>>>>> bd4ea05c (Add comment and reference to redesign issue #)
+html, body, input, textarea, select, button, .mainhero {
+    background-color: #181a1b
+}
+
+html, body, input, textarea, select, button {
+    border-color: #575757;
+    color: #e8e6e3
+}
+
+.mainsummary {
+     color: #e8e6e3
+}
+
+.head {
+    background: rgb(24, 26, 27)
+}
+
+.menusimple>li a, .menusimple>li a:active, .menusimple>li a:visited, .menusimple>li a:link {
+    color: rgb(222, 220, 215);
+}
+
+a {
+    color: #3391ff
+}
+
+table {
+    border-color: #4c4c4c
+}
+
+::placeholder {
+    color: #bab5ab
+}
+
 ::selection {
     background-color: #005ccc;
     color: #ffffff;
 }
+
 ::-moz-selection {
     background-color: #005ccc;
     color: #ffffff;
@@ -172,4 +212,39 @@ select:-webkit-autofill {
 }
 * {
     scrollbar-color: #2a2c2e #1c1e1f;
+=======
+
+::-moz-selection {
+    background-color: #005ccc;
+    color: #ffffff
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: #545b00 !important;
+    color: #e8e6e3 !important
+}
+
+::-webkit-scrollbar {
+    background-color: #1c1e1f;
+    color: #c5c1b9
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2a2c2e
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #323537
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #3d4043
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #181a1b
+}
+
+* {
+    scrollbar-color: #2a2c2e #1c1e1f
 }
